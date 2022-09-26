@@ -1,0 +1,84 @@
+%
+%%%%%%% Chinese Resume/CV LaTeX Template %%%%%%%%%%
+%
+% This template has been downloaded from:
+% 
+%
+% Author:
+% Jianuo Li <lijianuo0411@outlook.com>
+% -------------------------------------------------
+%环境配置：xelatex格式
+%编码条件：UTF-8 Unicode
+%--------------------------------------------------
+% 配置页面
+\documentclass[11pt, a4paper]{cv}% 可选项a4,a5,paper
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}% 尺寸
+\fontdir[fonts/] % 页眉页尾设置
+% 右侧栏颜色设置
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink
+% awesome-nephritis, awesome-concrete, awesome-darknight
+% \definecolor{awesome}{HTML}{CA63A8} HTML自定义颜色选项
+\colorlet{awesome}{awesome-skyblue}
+% 文本颜色设置
+%\definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+%\definecolor{lighttext}{HTML}{999999}
+% 如果不希望做颜色分区设置false 
+\setbool{acvSectionColorHighlight}{true}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}%个人信息形式 图标+文本
+
+%个人信息
+% 斜杠或竖杠的分隔形式: circle|rectangle,edge/noedge,left/right
+\photo[rectangle,edge,right]{小废物的照片.jpg}
+\name{Jianuo}{Li}
+\mobile{(+49) 1522222111}
+\email{lijianuo0411@outlook.com}
+\github{Lilinowaytogo}
+%\position{{\enskip\cdotp\enskip}}
+%\address{德国}
+%\homepage{}
+%\linkedin{}
+% \gitlab{}
+% \stackoverflow{}{}
+% \twitter{}
+% \skype{}
+% \medium{}
+% \googlescholar{}{}
+%% \firstname and \lastname will be used
+%\extrainfo{申请位置}
+%\quote{}
+%%%%配置中文环境，下载中文字体
+\usepackage{xeCJK}
+\setCJKmainfont{NotoSansCJKtc-Regular.otf}
+%%%%配置语言环境
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+%--------------------------------------------
+\begin{document}
+% 信息位置(C: center, L: left, R: right)
+\makecvheader[L]
+% 页尾三项(<left>, <center>, <right>), 如果不需要，请将其中任何一项留空
+\makecvfooter
+  {\today}
+  {Jianuo Li~~~·~~~CV}
+  {\thepage}
+%------------------------------------------
+% 简历结构（按需求在Resume文件夹中填写信息导入）
+
+%\input{resume/个人简介.tex}
+\input{resume/教育经历.tex}
+\input{resume/项目经历.tex}
+\input{resume/技能.tex}
+\input{resume/语言.tex}
+\input{resume/成就.tex}
+\input{resume/实习经历.tex}
+\input{resume/发表期刊论文.tex}
+%\input{resume/职位.tex}
+%\input{resume/参与组织活动.tex}
+
+%-------------------------------------------------------------------------------
+\end{document}
